@@ -30,6 +30,6 @@ export const login: RequestHandler = async (req, res, next) => {
       return res.status(200).json(user.access_token);
     }
   } catch (error) {
-    return res.status(405).json('Not Allowed');
+    return res.json(error)
   }
 };
